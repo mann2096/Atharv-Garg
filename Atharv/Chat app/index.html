@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="left-section">
+    <h3>Enter your API key here</h3>
+    <input type="text" id="api-key" placeholder="API key..">
+    <h3>Select the model that you want to use</h3>
+    <select id="drop-down">
+      <option value="openrouter/cypher-alpha:free">cypher</option>
+      <option value="mistralai/mistral-small-3.2-24b-instruct:free">Mistral 3.2</option>
+      <option value="moonshotai/kimi-dev-72b:free">kimi 72b</option>
+      <option value="deepseek/deepseek-r1-0528-qwen3-8b:free">deepseek</option>
+      <option value="deepseek/deepseek-r1-0528:free">deepseek R1</option>
+    </select>
+    <h3>Chat History</h3>
+    <ul id="history-list"></ul>
+  </div>
+  <div id="right-section">
+    <h1 id="heading">ChatGPT</h1>
+    <button id="new-chat-btn">New Chat</button>
+    <div id="app">
+      <div id="chat-box"></div>
+      <div id="input-area">
+        <input type="text" id="user-input" placeholder="Type a message...">
+        <button id="enter-btn">
+          <img src="https://img.icons8.com/ios-filled/50/circled-right-2.png" alt="Enter" />
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>

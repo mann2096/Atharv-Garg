@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lumberjack Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="startScreen">
+    <h1>Lumberjack Game</h1>
+    <p>
+      Press <strong>ArrowLeft</strong> to chop left, <strong>ArrowRight</strong> to chop right.<br>
+      Avoid branches on your side! If you hit one you will be paused for 4 seconds. You can collect apples to shield you from your mistakes. To collect Apples click on the wrong side for the apple branch<br>
+      Enter game duration and hit Start.
+    </p>
+    <label for="timeInput">Time (seconds): </label>
+    <input type="number" id="timeInput" min="5" value="30">
+    <button onclick="startGame()">Start Game</button>
+  </div>
+  <canvas id="gameCanvas"></canvas>
+  <div id="endScreen">
+    <h2>Game Over</h2>
+    <p id="finalScore"></p>
+    <button onclick="restartGame()">Play Again</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
